@@ -23,11 +23,23 @@ These events are filtered, and the licenses of the customer in our
 license management system is then updated to reflect the product Stock Keeping
 Units (SKUs) purchased by the customer.
 
+## Instructions
+Candidates are required to:
+1. [ ] Fork this repository to their personal github space
+2. [ ] Add the code necessary to complete the task
+3. [ ] Ensure that the code performs as required
+4. [ ] Ensure that unit tests meets at least 50% code coverage
+5. [ ] Be prepared to explain decisions taken and possible improvements
+6. [ ] Do not spend more than 2 hours on the take home test
+7. [ ] Submit by submitting a PR on this repository
+
+The application attached ships with a postgresql, and a kafka broker running
+in the docker compose environment.
+
+Candidates are required to run `docker-compose up -d` before starting
+development to ensure they understand the tasks required.
 
 ## Problem
-The application attached ships with a simple postgresql based d:ocker image, 
-and a kafka broker.
-
 We provided a simple scaffolding for the web server image, and a simple kafka 
 producer and consumer library
 
@@ -62,7 +74,7 @@ The candidate should be able to run `docker-compose up -d` to simulate running
 the environment.
 
 The simulator will start sending messages to the web component that forms part
-of this test.
+of this test
 
 ### Python 3
 The stack consists of:
