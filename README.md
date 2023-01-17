@@ -44,4 +44,37 @@ Your task include:
 
 3. 
 
+## Technical Stack
+You can choose to complete the test with either python or golang, and should 
+not be doing both.
+
+### Python 3
+The stack consists of:
+1. python==3.11.1
+2. django==4.1
+3. psycopg2
+4. pytest
+
+A requirements.txt file is provide, and you should set up with a virtual env
+and install with the `pip install -r requirements.txt` command to have the basic
+libraries installed.
+
+### Evaluation
+1. We will require that testing be incorporated to meet at least 50% of code 
+   coverage in unit testing.
+2. 
+
+
+## Troubleshooting
+### Common Issues
+
+### Python 3
+1. Error with installing `psycopg2` on Mac
+   Refer to this (thread)[https://stackoverflow.com/questions/66777470/psycopg2-installed-on-m1-running-macos-big-sur-but-unable-to-run-local-server] on stackoverflow for solutions
+   ```
+   brew install openssl
+   export LDFLAGS="-L$(brew --prefix openssl)/lib"
+   pip install psycopg2
+   ```
+
 
