@@ -39,16 +39,20 @@ in the docker compose environment.
 Candidates are required to run `docker-compose up -d` before starting
 development to ensure they understand the tasks required.
 
+One of the images spun up is for a golang application that simulates sending
+customer data to the endpoint `http://web/salesforce/webhook`, which will be
+one of the task problem the candidate needs to complete.
+
 ## Problem
 We provided a simple scaffolding for the web server image, and a simple kafka 
-producer and consumer library
+producer and consumer library.
 
 As input, we run a simple random data generator that generates some simple 
-data to simulate salesforce opportunity data being populated.
+data to simulate salesforce customer data being populated.
 
 Your task include:
 
-1. parse the salesforce opportunity data for license updates, and produce the 
+1. parse the salesforce customer data for license updates, and produce the 
    formatted data on kafka
 
 2. read the update license message from the kafka broker, and update the 
@@ -74,7 +78,7 @@ The candidate should be able to run `docker-compose up -d` to simulate running
 the environment.
 
 The simulator will start sending messages to the web component that forms part
-of this test
+of this test.
 
 ### Python 3
 The stack consists of:

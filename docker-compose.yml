@@ -9,13 +9,6 @@ services:
       POSTGRES_DB: mydb 
       POSTGRES_PASSWORD: password
       POSTGRES_USER: myuser 
-  web:
-    build:
-      context: .
-    ports:
-      - "8000:8000"
-    depends_on:
-      - db
   zookeeper:
     image: confluentinc/cp-zookeeper:7.3.1
     hostname: zookeeper
@@ -52,4 +45,18 @@ services:
       CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
       CONFLUENT_METRICS_ENABLE: 'false'
       CONFLUENT_SUPPORT_CUSTOMER_ID: 'anonymous'
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile-web
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile-simulator
+    depends_on:
+      - web
 
