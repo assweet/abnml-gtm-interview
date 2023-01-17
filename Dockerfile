@@ -1,4 +1,4 @@
-FROM python:3.11.1-alpine3.17
+FROM python:3.11.1
 ENV PYTHONUNBUFFERED 1
 EXPOSE 8000/tcp
 COPY python3 /app

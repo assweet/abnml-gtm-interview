@@ -25,7 +25,7 @@ Units (SKUs) purchased by the customer.
 
 
 ## Problem
-The application attached ships with a simple postgresql based docker image, 
+The application attached ships with a simple postgresql based d:ocker image, 
 and a kafka broker.
 
 We provided a simple scaffolding for the web server image, and a simple kafka 
@@ -44,9 +44,21 @@ Your task include:
 
 3. 
 
+## Simulated API
+The code in simulator runs a random data generator to simulate roughly 6 
+changes per minute.
+
+The data follows the salesforce API type data, and should be received by the 
+URL `http://web/salesforce/webhook`
+
 ## Technical Stack
 You can choose to complete the test with either python or golang, and should 
 not be doing both.
+
+### Common
+A `Dockerfile` and `docker-compose.yaml` to setup and simulate the environment.
+
+The candidate should be able to run `docker-compose `
 
 ### Python 3
 The stack consists of:
