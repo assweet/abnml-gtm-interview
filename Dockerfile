@@ -7,5 +7,4 @@ RUN useradd -mU -u 50000 -s /bin/bash app && \
 WORKDIR /app
 RUN pip install -r requirements.txt
 USER app
-ENTRYPOINT gunicorn 
-CMD proj.wsgi:application --bind 0.0.0.0:8000 --workers 2
+ENTRYPOINT gunicorn proj.wsgi:application --bind 0.0.0.0:8000 --workers 2

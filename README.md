@@ -58,7 +58,11 @@ not be doing both.
 ### Common
 A `Dockerfile` and `docker-compose.yaml` to setup and simulate the environment.
 
-The candidate should be able to run `docker-compose `
+The candidate should be able to run `docker-compose up -d` to simulate running 
+the environment.
+
+The simulator will start sending messages to the web component that forms part
+of this test.
 
 ### Python 3
 The stack consists of:
