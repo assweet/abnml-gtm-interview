@@ -1,0 +1,8 @@
+FROM golang:1.19.5
+COPY simulator /app
+RUN useradd -mU -u 50000 -s /bin/bash app && \
+  chown -R app /app
+WORKDIR /app
+RUN go mod tidy && go build /app/cmd/main.go
+USER app
+ENTRYPOINT /app/main
