@@ -1,9 +1,10 @@
-FROM python:3.11.1
+FROM python:3.11.1-alpine3.17
 ENV PYTHONUNBUFFERED 1
 EXPOSE 8000/tcp
 COPY python3 /app
-RUN useradd -mU -u 50000 -s /bin/bash app && \
+RUN adduser -D -h /app app && \
   chown -R app /app
+RUN apk --update add gcc python3-dev postgresql-client postgresql-dev musl-dev
 WORKDIR /app
 RUN pip install -r requirements.txt
 USER app
