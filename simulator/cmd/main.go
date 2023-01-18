@@ -21,10 +21,12 @@ const numCustomers int = 10
 type CustomerData struct {
 	AccountManager  string `faker:"name"`
 	Id              string `faker:"uuid_hyphenated"`
-	ParentId        string `faker:"uuid_hyphenated"`
 	Name            string `faker:"domain_name"`
 	SalesEngineerId string `faker:"uuid_hyphenated"`
 	SignedTos       bool
+	SKU1            bool
+	SKU2            bool
+	SKU3            bool
 }
 
 func main() {
